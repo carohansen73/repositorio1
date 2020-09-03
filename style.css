@@ -11,6 +11,10 @@ body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+h3 {
+    margin-bottom: 20px;
+}
+
 header {
     width: 100%;
     height: 50px;
@@ -200,9 +204,10 @@ tr {
     width: 50%;
 }
 
+
 /* Para veganos */
 
-.introveganos{
+.introveganos {
     display: block;
     margin: 0;
     width: 500px;
@@ -282,21 +287,17 @@ tr {
     .tabla-top5 {
         padding-right: 40px;
     }
-
     .contenido-recetas img {
         width: 500px;
     }
-
     /* Solo para veganos*/
-
-    .introveganos{
+    .introveganos {
         display: flex;
         justify-content: center;
         width: 100%;
         border-bottom: 2px solid rgb(230, 55, 2);
-        margin:auto;
+        margin: auto;
     }
-
 }
 
 @media only screen and (min-width: 920px) {
