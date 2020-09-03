@@ -2,7 +2,6 @@ body {
     background-image: url(../images/fondo-marmol1.jpg);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin: 0;
-    box-sizing: border-box;
     display: grid;
     grid-template-areas: "header header" "main main" "footer footer";
 }
