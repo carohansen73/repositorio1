@@ -1,0 +1,314 @@
+body {
+    background-image: url(../images/fondo-marmol1.jpg);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-areas: "header header" "main main" "footer footer";
+}
+
+* h2 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+header {
+    width: 100%;
+    height: 50px;
+    background-color: rgb(230, 55, 2);
+    position: fixed;
+    grid-area: header;
+}
+
+.menu {
+    position: fixed;
+    top: 50px;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(255, 209, 166, 0.9);
+    display: none;
+    grid-area: nav;
+}
+
+.menu.active {
+    display: block;
+}
+
+.menu ul {
+    padding-left: 0px;
+    margin-top: 0px;
+}
+
+.menu a {
+    color: black;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    color: white;
+}
+
+.menu li:hover {
+    background-color: rgb(230, 55, 2, 0.6);
+    color: white;
+}
+
+.menu li {
+    display: block;
+    list-style: none;
+    padding: 13px;
+    padding-left: 21px;
+    border-bottom: 1px solid rgb(230, 55, 2, 0.6);
+}
+
+.icon-menu-1 {
+    background-image: url(../images/menu-hambur.png);
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 30px;
+    background-position: center;
+    border: 0;
+    border-radius: 3px;
+    margin-top: 10px;
+    margin-right: 25px;
+}
+
+.icon-menu-1:focus {
+    outline: none;
+}
+
+header h1 {
+    color: white;
+    font-size: 24px;
+    margin: 10px 0px 0px;
+    justify-content: center;
+    border-collapse: collapse;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.contenedor {
+    width: 98%;
+    display: flex;
+    margin: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+    justify-content: space-between;
+}
+
+footer {
+    text-align: center;
+    background-color: rgb(255, 209, 166);
+    border-bottom: 2px solid rgb(230, 55, 2);
+    margin-top: 0px;
+    padding: 2px;
+    grid-area: footer;
+}
+
+
+/* section */
+
+.mobile {
+    margin-top: 50px;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.desktop {
+    display: none;
+}
+
+.intro h1,
+p {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.intro {
+    text-align: center;
+    border-bottom: 2px solid rgb(230, 55, 2);
+    grid-area: intro;
+}
+
+
+/* tabla */
+
+.tabla-top5 {
+    text-align: center;
+    border-bottom: 2px solid rgb(230, 55, 2);
+    grid-area: table;
+}
+
+.tabla-top5 a {
+    text-decoration: none;
+    color: black;
+}
+
+.tabla-top5 a:hover {
+    background-color: red;
+    color: white;
+}
+
+table,
+th,
+tr {
+    border: 1px solid black;
+    margin: auto;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+thead,
+th {
+    background-color: rgb(230, 55, 2);
+    color: white;
+}
+
+table {
+    height: 180px;
+    width: 250px;
+    margin-bottom: 20px;
+}
+
+tbody,
+td,
+tr {
+    background-color: rgb(255, 209, 166);
+    border: 1px solid black;
+}
+
+
+/* para home y veganos */
+
+.contenedor-recetas {
+    border-bottom: 2px solid rgb(230, 55, 2);
+    grid-area: article;
+}
+
+.contenido-recetas {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.contenido-recetas h2 {
+    text-align: center;
+}
+
+.contenido-recetas img {
+    display: block;
+    margin: auto;
+    width: 50%;
+}
+
+/* Para veganos */
+
+.introveganos{
+    display: block;
+    margin: 0;
+    width: 500px;
+    border-bottom: 2px solid rgb(230, 55, 2);
+}
+
+
+/* Para resolucion de 640px en adelante */
+
+@media only screen and (min-width: 640px) {
+    body {
+        display: grid;
+        grid-template-areas: "header header" "nav nav" "main main" "footer footer";
+    }
+    .mobile {
+        display: none;
+    }
+    .desktop {
+        display: block;
+    }
+    .img-tit {
+        display: flex;
+    }
+    .contenedor {
+        margin-left: 13px;
+    }
+    header {
+        height: 60px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        position: relative;
+    }
+    header h1 {
+        margin: auto;
+        color: white;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 3rem;
+    }
+    .icon-menu-1 {
+        display: none;
+    }
+    .menu {
+        display: flex;
+        position: static;
+        height: 70%;
+        justify-content: center;
+        border-top: 2px white solid;
+        border-bottom: 2px white solid;
+    }
+    .menu.active {
+        display: flex;
+        position: static;
+        justify-content: center;
+    }
+    .menu li {
+        padding: 10px;
+        margin-top: auto;
+        margin-bottom: 0;
+        border-bottom: 0;
+    }
+    .menu li:hover {
+        background-color: white;
+    }
+    .menu a:hover {
+        color: black;
+    }
+    .menu ul {
+        display: flex;
+        margin-bottom: 13px;
+    }
+    .img-tit h2 {
+        margin-top: 80px;
+        font-size: 2.5rem;
+        color: black;
+        margin-right: 20px;
+    }
+    .tabla-top5 {
+        padding-right: 40px;
+    }
+
+    .contenido-recetas img {
+        width: 500px;
+    }
+
+    /* Solo para veganos*/
+
+    .introveganos{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        border-bottom: 2px solid rgb(230, 55, 2);
+        margin:auto;
+    }
+
+}
+
+@media only screen and (min-width: 920px) {
+    body {
+        display: grid;
+        grid-template-areas: "header header" "nav nav" "main main" "footer footer";
+    }
+    .introduccion {
+        display: flex;
+    }
+    .intro p {
+        text-align: start;
+        margin: 15px;
+    }
+}
